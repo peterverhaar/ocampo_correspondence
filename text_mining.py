@@ -1,4 +1,7 @@
+import nltk
 from nltk.corpus import stopwords
+from nltk import word_tokenize,pos_tag,sent_tokenize
+
 from collections import Counter
 stopwords = stopwords.words('english')
 import math
