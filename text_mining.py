@@ -1,4 +1,5 @@
 from nltk.corpus import stopwords
+from collections import Corpus
 stopwords = stopwords.words('english')
 import math
 import re
