@@ -7,6 +7,14 @@ stopwords = stopwords.words('english')
 import math
 import re
 
+
+def clean_wordlist(words):
+    words = [word for word in words if word not in string.punctuation]
+    words = [word for word in words if word not in stopwords]
+    words = [re.sub(r'([….])|(\')','',word) for word in words]
+    words = [word for word in words if re.search(r'\w', word)]
+    return words
+
 def remove_punctuation(words):
     new_list= []
     for w in words:
